@@ -23,5 +23,6 @@ public class Demo {
     private String groupId;
     private Date createTime;
     private String appName;
+    private Integer status;
 
 }

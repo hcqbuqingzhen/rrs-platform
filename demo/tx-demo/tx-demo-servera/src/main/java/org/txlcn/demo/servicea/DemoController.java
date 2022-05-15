@@ -26,4 +26,10 @@ public class DemoController {
             , @RequestParam(value = "f", required = false) String flag) {
         return demoService.execute(value, exFlag, flag);
     }
+
+    @RequestMapping("/txlcn-tcc")
+    public String executeTcc(@RequestParam("value") String value, @RequestParam(value = "ex", required = false) String exFlag
+            , @RequestParam(value = "f", required = false) String flag) {
+        return demoService.executeTcc(value, exFlag, flag);
+    }
 }

@@ -9,4 +9,6 @@ package org.txlcn.demo.servicea;
 public interface DemoService {
 
     String execute(String value, String ex, String flag);
+    String executeTcc(String value, String ex, String flag);
+
 }

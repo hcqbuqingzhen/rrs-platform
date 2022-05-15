@@ -8,4 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ServiceBClient {
     @GetMapping("/rpc")
     String rpc(@RequestParam("value") String name);
+
+    @GetMapping("/rpc-tcc")
+    String rpcTcc(@RequestParam("value") String name);
 }

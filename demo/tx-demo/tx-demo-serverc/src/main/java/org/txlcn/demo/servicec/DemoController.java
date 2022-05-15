@@ -21,4 +21,9 @@ public class DemoController {
     public String rpc(@RequestParam("value") String value) {
         return demoService.rpc(value);
     }
+
+    @GetMapping("/rpc-tcc")
+    public String rpcTcc(@RequestParam("value") String value) {
+        return demoService.rpcTcc(value);
+    }
 }

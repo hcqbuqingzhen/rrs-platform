@@ -9,4 +9,5 @@ package org.txlcn.demo.servicec;
 public interface DemoService {
     
     String rpc(String value);
+    String rpcTcc(String value);
 }
