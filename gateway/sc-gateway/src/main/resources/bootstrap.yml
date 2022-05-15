@@ -1,0 +1,18 @@
+server:
+  #服务端口
+  port: 8081
+
+spring:
+  application:
+    name: sc-gateway
+## 开启http访问路由 开发环境下调试 注释掉 配置模块中已经配置
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#  endpoint:
+#    gateway:
+#      enabled: true
+#    health:
+#      show-details: always

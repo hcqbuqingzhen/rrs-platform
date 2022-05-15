@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${rrs.datasource.ip}:3306/txlcn_demo?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: ${rrs.datasource.username}
+    password: ${rrs.datasource.password}
+
+## tx-manager 配置
+# 默认之配置为TM的本机默认端口
+tx-lcn:
+  ribbon:
+    loadbalancer:
+      dtx:
+        enabled: true
+  logger:
+    enabled: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://${rrs.datasource.ip}:3306/tx_logger?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: ${rrs.datasource.username}
+    password: ${rrs.datasource.password}
+#  client:
+#    manager-address: 127.0.0.1:8070
+
+
