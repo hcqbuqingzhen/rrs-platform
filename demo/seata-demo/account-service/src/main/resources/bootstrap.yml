@@ -1,0 +1,15 @@
+server:
+  port: 9093
+
+spring:
+  application:
+    name: account-service
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        group: SEATA_GROUP

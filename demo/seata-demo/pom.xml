@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>demo</artifactId>
+        <groupId>com.rrs</groupId>
+        <version>4.6.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>seata-demo</artifactId>
+    <packaging>pom</packaging>
+    <description>实现seata分布式事务的demo模块</description>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>1.4.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <modules>
+        <!--seata通用配置模块-->
+        <module>seata-common-starter</module>
+        <!-- 业务服务(TM) -->
+        <module>app-service</module>
+        <!-- 订单服务(RM) -->
+        <module>order-service</module>
+        <!-- 账号服务(RM) -->
+        <module>account-service</module>
+        <!-- 库存服务(RM) -->
+        <module>storage-service</module>
+    </modules>
+</project>

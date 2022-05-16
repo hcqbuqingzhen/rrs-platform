@@ -14,7 +14,8 @@
     <modules>
         <module>common-core</module>
         <module>db-spring-boot-starter</module>
-        <module>common-spring-boot-start</module>
+        <module>common-spring-boot-starter</module>
+        <module>ribbon-spring-boot-starter</module>
     </modules>
 
 

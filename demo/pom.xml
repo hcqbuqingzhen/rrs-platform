@@ -15,6 +15,9 @@
         <module>provider-hello</module>
         <module>springboot-demo</module>
         <module>tx-demo</module>
+        <module>seata-demo</module>
+        <module>app-service</module>
+        <module>order-service</module>
     </modules>
 
 

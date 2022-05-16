@@ -1,0 +1,22 @@
+seata:
+  tx-service-group: test_tx_service_group
+  config:
+    type: nacos
+    nacos:
+      serverAddr: ${spring.cloud.nacos.server-addr}
+      group: SEATA_GROUP
+      username: nacos
+      password: nacos
+  registry:
+    type: nacos
+    nacos:
+      server-addr: ${spring.cloud.nacos.server-addr}
+      group: SEATA_GROUP
+      username: nacos
+      password: nacos
+  service:
+    vgroup-mapping:
+      vgroup: test_tx_service_group
+      rgroup: default
+
+#客户端如何注册到seata?原因是默认名字为seata-server

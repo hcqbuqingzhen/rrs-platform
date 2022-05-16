@@ -1,0 +1,20 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: business-service
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        group: SEATA_GROUP
+
+ribbon:
+  ConnectTimeout: 100000
+  ReadTimeout: 1000000
+  OkToRetryOnAllOperations: false
