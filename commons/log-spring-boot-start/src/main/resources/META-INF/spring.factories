@@ -1,0 +1,10 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.rrs.log.config.TtlMDCAdapterInitializer
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.rrs.log.config.LogAutoConfigure,\
+com.rrs.log.service.impl.LoggerAuditServiceImpl,\
+com.rrs.log.service.impl.DbAuditServiceImpl,\
+com.rrs.log.aspect.AuditLogAspect,\
+com.rrs.log.filter.WebTraceFilter,\
+com.rrs.log.trace.FeignTraceInterceptor

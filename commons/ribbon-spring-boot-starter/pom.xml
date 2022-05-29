@@ -10,7 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ribbon-spring-boot-starter</artifactId>
-    <description>feign和ribbon的自定义配置和关键方法重写</description>
+    <description>feign和ribbon的自定义配置和关键方法重写
+    1.fiegn过滤器增加租户id和用户信息请求头
+    2.负载均衡重写,可以在开发环境优先调用开发环境的服务.
+    3.httpClient修正,改用其他的.
+    </description>
 
     <dependencies>
         <dependency>

@@ -16,6 +16,7 @@
         <module>db-spring-boot-starter</module>
         <module>common-spring-boot-starter</module>
         <module>ribbon-spring-boot-starter</module>
+        <module>log-spring-boot-start</module>
     </modules>
 
 
