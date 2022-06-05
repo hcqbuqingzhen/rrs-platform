@@ -1,11 +1,16 @@
 package com.springboot.demo.controller;
 
+import com.rrs.common.core.lock.DistributedLock;
+import com.rrs.redis.lock.RedisDistributedLockFactory;
 import com.springboot.demo.bean.BeanList;
 import com.springboot.demo.bean.Mybean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.TimeUnit;
 
 @RestController
 public class DemoController {
@@ -20,6 +25,30 @@ public class DemoController {
             System.out.println(mybean.toString());
         }
         return "";
+    }
+
+    /**
+     * 测试redis分布式锁
+     * @param id
+     * @return
+     */
+    @GetMapping("/lock/{id}")
+    public String testLock(@PathVariable Integer id){
+        DistributedLock distributedLock = RedisDistributedLockFactory.getDistributedLock("aaa", 10, 10, TimeUnit.SECONDS, true);
+
+        try {
+            distributedLock.lock();
+            System.out.println("拿到锁了:"+System.currentTimeMillis());
+            Thread.sleep(3000l);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            if(id==2){
+                distributedLock.unlock();
+            }
+
+        }
+        return "success";
     }
 
 }

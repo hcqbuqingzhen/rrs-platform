@@ -21,6 +21,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.rrs</groupId>
+            <artifactId>redis-spring-boot-starter</artifactId>
+            <version>4.6.0</version>
+        </dependency>
     </dependencies>
 
 

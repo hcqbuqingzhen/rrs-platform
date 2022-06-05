@@ -17,6 +17,7 @@
         <module>common-spring-boot-starter</module>
         <module>ribbon-spring-boot-starter</module>
         <module>log-spring-boot-start</module>
+        <module>redis-spring-boot-starter</module>
     </modules>
 
 
