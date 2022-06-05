@@ -10,13 +10,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 @RestController
 public class DemoController {
     @Autowired
     private ApplicationContext applicationContext;
-
+    @Resource
+    RedisDistributedLockFactory factory;
     @GetMapping("/demo")
     public String getBeanInfo(){
         //bean 的名字由方法名确定
@@ -33,8 +35,8 @@ public class DemoController {
      * @return
      */
     @GetMapping("/lock/{id}")
-    public String testLock(@PathVariable Integer id){
-        DistributedLock distributedLock = RedisDistributedLockFactory.getDistributedLock("aaa", 10, 10, TimeUnit.SECONDS, true);
+    public String testLock(@PathVariable Integer id) throws Exception {
+        DistributedLock distributedLock = factory.getDistributedLock("aaa", 10, 10, TimeUnit.SECONDS, true);
 
         try {
             distributedLock.lock();

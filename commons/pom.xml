@@ -18,6 +18,7 @@
         <module>ribbon-spring-boot-starter</module>
         <module>log-spring-boot-start</module>
         <module>redis-spring-boot-starter</module>
+        <module>zk-spring-boot-starter</module>
     </modules>
 
 

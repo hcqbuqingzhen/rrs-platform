@@ -13,7 +13,7 @@ public interface DistributedLockAdapter {
      * @param leaseTime
      * @param unit
      */
-    boolean tryLock(String key, long waitTime, long leaseTime, TimeUnit unit, boolean isFair) throws InterruptedException;
+    boolean tryLock(String key, long waitTime, long leaseTime, TimeUnit unit, boolean isFair) throws Exception;
 
     /**
      * 枷锁
@@ -23,10 +23,10 @@ public interface DistributedLockAdapter {
      * @param unit
      * @param isFair
      */
-    void lock(String key, long waitTime, long leaseTime, TimeUnit unit, boolean isFair);
+    void lock(String key, long waitTime, long leaseTime, TimeUnit unit, boolean isFair) throws Exception;
 
     /**
      * 解锁
      */
-    void unlock() ;
+    void unlock() throws Exception;
 }

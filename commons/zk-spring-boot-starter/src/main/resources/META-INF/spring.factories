@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.rrs.zk.lock.ZookeeperDistributedLockFactory,\
+com.rrs.zk.ZookeeperAutoConfiguration

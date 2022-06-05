@@ -32,7 +32,7 @@ public class DistributedLock {
         locker.lock(key,waitTime,leaseTime,unit,isFair);
     }
 
-    public void unlock() {
+    public void unlock() throws Exception {
         locker.unlock();
     }
 

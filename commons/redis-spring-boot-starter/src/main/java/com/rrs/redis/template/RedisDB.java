@@ -972,4 +972,24 @@ public class RedisDB {
         return script.evalSha(mode, shaDigest, returnType, keys, values);
     }
 
+    /**
+     * 发布
+     * @param key
+     * @param message
+     */
+    public void publish(String key,String message){
+        RQueue<Object> queue = redisson.getQueue(key);
+        queue.add(message);
+    }
+
+    /**
+     * sub
+     * @param key
+     * @return
+     */
+    public Object subscribe(String key){
+        RQueue<Object> queue = redisson.getQueue(key);
+        Object poll = queue.poll();
+        return poll;
+    }
 }
