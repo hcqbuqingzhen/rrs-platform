@@ -18,6 +18,7 @@
         <module>seata-demo</module>
         <module>app-service</module>
         <module>order-service</module>
+        <module>rabbitmq-demo</module>
     </modules>
 
 

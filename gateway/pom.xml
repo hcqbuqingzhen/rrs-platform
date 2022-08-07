@@ -14,6 +14,7 @@
     <description>网关工程</description>
     <modules>
         <module>sc-gateway</module>
+        <module>sc-gateway-sa-token</module>
     </modules>
 
 </project>

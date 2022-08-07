@@ -16,9 +16,11 @@
         <module>db-spring-boot-starter</module>
         <module>common-spring-boot-starter</module>
         <module>ribbon-spring-boot-starter</module>
-        <module>log-spring-boot-start</module>
+        <module>log-spring-boot-starter</module>
         <module>redis-spring-boot-starter</module>
         <module>zk-spring-boot-starter</module>
+        <module>rabbitmq-spring-boot-starter</module>
+        <module>swagger2-spring-boot-starter</module>
     </modules>
 
 

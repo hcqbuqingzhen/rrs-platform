@@ -1,0 +1,17 @@
+server:
+  #服务端口
+  port: 5002
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: hcq
+    password: 121056
+    virtual-host: /hcq
+    #这个配置是保证消费者会消费消息，手动确认
+    listener:
+      simple:
+        acknowledge-mode: manual
+
+    template:
+      mandatory: true
