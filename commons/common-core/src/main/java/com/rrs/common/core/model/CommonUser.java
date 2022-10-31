@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CommonUser {
     private Long id;
-    
+
     private String username;
 }
