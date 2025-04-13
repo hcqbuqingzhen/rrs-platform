@@ -18,8 +18,6 @@
         <module>config</module>
         <!--分布式事务模块，tx-lcn和seata-->
         <module>transaction</module>
-        <!--job模块-->
-        <module>job</module>
         <!--认证中心-->
         <module>uaa</module>
         <!--业务模块-->
